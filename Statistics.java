@@ -9,8 +9,10 @@ public class Statistics implements Serializable {
 	private float[] avgscores = new float[5];
 	public String var;
 	public String var1;
-	public Statistics() {
-		
+	public Statistics(Student [] quizList) {
+		findlow(quizList);
+		findhigh(quizList);
+		findavg(quizList);
 	}
 	/* This method will find the lowest score and store it in an   array names lowscores. */
 	public void findlow(Student [] quizList) {
